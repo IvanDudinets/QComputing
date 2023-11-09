@@ -16,9 +16,10 @@ def cost_function(x):
     return np.transpose(x) @ Q @ x
 
 solutions = []
-for i in range(2**5):
+# loop over binary numbers from' 00000' to '11111'
+for i in range(2**5): 
     x = [int(d) for d in str(bin(i))[2:].zfill(5)]
     print('x=', x, '   cost=', cost_function(x))
-    if cost_function(x) == 5:
+    if cost_function(x) == 5: # max cost value is 5 
         solutions.append(x)
 print('solution = ', solutions)
