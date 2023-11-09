@@ -16,7 +16,7 @@ def cost_function(x):
     return np.transpose(x) @ Q @ x
 
 solutions = []
-# loop over binary numbers from' 00000' to '11111'
+# brute force solution: loop over binary numbers from' 00000' to '11111'
 for i in range(2**5): 
     x = [int(d) for d in str(bin(i))[2:].zfill(5)]
     print('x=', x, '   cost=', cost_function(x))
