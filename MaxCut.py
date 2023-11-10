@@ -44,7 +44,7 @@ print()
 solutions = []
 # brute force solution: loop over binary numbers from' 00000' to '11111'
 for i in range(2**N_edges): 
-    x = [int(d) for d in str(bin(i))[2:].zfill(5)]
+    x = [int(d) for d in str(bin(i))[2:].zfill(N_edges)]
     print('x=', x, '   cost=', cost_function(x,Q))
     if cost_function(x, Q) == 5: # max cost value is 5 
         solutions.append(x)
